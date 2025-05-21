@@ -1,0 +1,31 @@
+[project]
+name = "museum-scraper"
+version = "0.1.0"
+description = "Web scraper for collecting exhibition data from museums' websites."
+authors = [
+    {name = "Erja Vaskivuori",email = "erja.vaskivuori@helsinki.fi"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "beautifulsoup4 (>=4.13.4,<5.0.0)",
+    "python-dateutil (>=2.9.0.post0,<3.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+autopep8 = "^2.3.2"
+coverage = "^7.8.0"
+pylint = "^3.3.7"
+
+[tool.autopep8]
+max_line_length = 100
+recursive = true
